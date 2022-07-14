@@ -5,7 +5,7 @@
 #include "puntajes.h"
 #include "rondas.h"
 
-char nombreJugador[5][30];
+string nombreJugador[2];
 string guardarPuntajes[1][3];
 //int puntajesFinal[100][2];
 int Puntaje1[10];

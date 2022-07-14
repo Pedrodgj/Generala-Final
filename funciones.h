@@ -9,14 +9,15 @@
 //#include "puntajes.h"
 
 //Mostrar Nombre Jugador
-void cargarNombreJugador (char nombre[5][30], int tam)
+void cargarNombreJugador (string nombre[3], int tam)
 {
     int i;
-    cin.getline(nombre[tam],30);
+    cin>>nombre[tam];
 
 };
 
-void mostrarNombresJugadores (char nombres[5][30], int tam)
+
+void mostrarNombresJugadores (string nombres[3], int tam)
 {
     int i;
     for(i=0; i<tam-1; i++)
@@ -25,7 +26,7 @@ void mostrarNombresJugadores (char nombres[5][30], int tam)
     }
 };
 
-void mostrarSoloJugador(char nombre[5][30], int pos)
+void mostrarSoloJugador(string nombre[3], int pos)
 {
     cout<<nombre[pos-1];
 }
