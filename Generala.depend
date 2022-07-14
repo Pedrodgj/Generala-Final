@@ -1,0 +1,135 @@
+# depslib dependency file v1.0
+1657416335 source:c:\users\galsi\desktop\universidad  utn\1 cuatrimestre\lab programacion 1\proyetopractica\generala\main.cpp
+	<iostream>
+	<ctime>
+	<cstring>
+	<cstdlib>
+	<cstdio>
+	<ctype.h>
+	<wchar.h>
+	<locale.h>
+	"puntosMenu.h"
+	"puntajes.h"
+	"funciones.h"
+	"rondas.h"
+
+1657415609 c:\users\galsi\desktop\universidad  utn\1 cuatrimestre\lab programacion 1\proyetopractica\generala\funciones.h
+	"puntosMenu.h"
+
+1657416991 c:\users\galsi\desktop\universidad  utn\1 cuatrimestre\lab programacion 1\proyetopractica\generala\puntosmenu.h
+	"funciones.h"
+	"puntajes.h"
+	"rondas.h"
+
+1657415515 c:\users\galsi\desktop\universidad  utn\1 cuatrimestre\lab programacion 1\proyetopractica\generala\puntajes.h
+	"funciones.h"
+	"puntosMenu.h"
+
+1657415323 c:\users\galsi\desktop\universidad  utn\1 cuatrimestre\lab programacion 1\proyetopractica\generala\rondas.h
+	<string>
+	<iostream>
+	"puntajes.h"
+	"funciones.h"
+
+1657755159 source:c:\users\dieeg\onedrive\desktop\utn frgp programacion 2022\proyecto-generala\main.cpp
+	<iostream>
+	<ctime>
+	<cstring>
+	<cstdlib>
+	<cstdio>
+	<ctype.h>
+	<wchar.h>
+	<locale.h>
+	"puntosMenu.h"
+	"puntajes.h"
+	"rondas.h"
+
+1657653352 c:\users\dieeg\onedrive\desktop\utn frgp programacion 2022\proyecto-generala\puntosmenu.h
+	"funciones.h"
+	"puntajes.h"
+	"rondas.h"
+
+1657654601 c:\users\dieeg\onedrive\desktop\utn frgp programacion 2022\proyecto-generala\funciones.h
+	"puntosMenu.h"
+	"funciones.h"
+	"graficos.h"
+
+1657492468 c:\users\dieeg\onedrive\desktop\utn frgp programacion 2022\proyecto-generala\puntajes.h
+	"funciones.h"
+	"puntosMenu.h"
+
+1657654320 c:\users\dieeg\onedrive\desktop\utn frgp programacion 2022\proyecto-generala\rondas.h
+	<string>
+	<iostream>
+	"puntajes.h"
+	"funciones.h"
+
+1657650793 c:\users\dieeg\onedrive\desktop\utn frgp programacion 2022\proyecto-generala\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1657651279 c:\users\dieeg\onedrive\desktop\utn frgp programacion 2022\proyecto-generala\graficos.h
+	"rlutil.h"
+	<windows.h>
+
+1657759908 source:c:\users\galsi\desktop\universidad  utn\1 cuatrimestre\lab programacion 1\laboratorio 1\proyecto-generala-dise-ografico\main.cpp
+	<iostream>
+	<ctime>
+	<cstring>
+	<cstdlib>
+	<cstdio>
+	<ctype.h>
+	<wchar.h>
+	<locale.h>
+	"puntosMenu.h"
+	"puntajes.h"
+	"rondas.h"
+
+1657759626 c:\users\galsi\desktop\universidad  utn\1 cuatrimestre\lab programacion 1\laboratorio 1\proyecto-generala-dise-ografico\puntosmenu.h
+	"funciones.h"
+	"puntajes.h"
+	"rondas.h"
+
+1657761389 c:\users\galsi\desktop\universidad  utn\1 cuatrimestre\lab programacion 1\laboratorio 1\proyecto-generala-dise-ografico\funciones.h
+	"puntosMenu.h"
+	"funciones.h"
+	"graficos.h"
+
+1657756757 c:\users\galsi\desktop\universidad  utn\1 cuatrimestre\lab programacion 1\laboratorio 1\proyecto-generala-dise-ografico\graficos.h
+	"rlutil.h"
+	<windows.h>
+
+1657756757 c:\users\galsi\desktop\universidad  utn\1 cuatrimestre\lab programacion 1\laboratorio 1\proyecto-generala-dise-ografico\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1657761488 c:\users\galsi\desktop\universidad  utn\1 cuatrimestre\lab programacion 1\laboratorio 1\proyecto-generala-dise-ografico\puntajes.h
+	"funciones.h"
+	"puntosMenu.h"
+
+1657760203 c:\users\galsi\desktop\universidad  utn\1 cuatrimestre\lab programacion 1\laboratorio 1\proyecto-generala-dise-ografico\rondas.h
+	<string>
+	<iostream>
+	"puntajes.h"
+	"funciones.h"
+
