@@ -133,3 +133,54 @@
 	"puntajes.h"
 	"funciones.h"
 
+1657837930 source:d:\escritorio\proyectopedro\generala-final\main.cpp
+	<iostream>
+	<ctime>
+	<cstring>
+	<cstdlib>
+	<cstdio>
+	<ctype.h>
+	<wchar.h>
+	<locale.h>
+	"puntosMenu.h"
+	"puntajes.h"
+	"rondas.h"
+
+1657838512 d:\escritorio\proyectopedro\generala-final\puntosmenu.h
+	"funciones.h"
+	"puntajes.h"
+	"rondas.h"
+
+1657838623 d:\escritorio\proyectopedro\generala-final\funciones.h
+	"puntosMenu.h"
+	"funciones.h"
+	"graficos.h"
+
+1657837930 d:\escritorio\proyectopedro\generala-final\graficos.h
+	"rlutil.h"
+	<windows.h>
+
+1657837930 d:\escritorio\proyectopedro\generala-final\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1657837930 d:\escritorio\proyectopedro\generala-final\puntajes.h
+	"funciones.h"
+	"puntosMenu.h"
+
+1657838646 d:\escritorio\proyectopedro\generala-final\rondas.h
+	<string>
+	<iostream>
+	"puntajes.h"
+	"funciones.h"
+

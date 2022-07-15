@@ -9,7 +9,7 @@
 int mayorPuntuacion = 0;
 int mayorTiradas = 0;
 
-int turnoCadaJugador(int rondas, char nombreJugador[5][30], int dado[], int Puntaje[], int nroJugador, int tiradaGeneral, int puntero = 0) {
+int turnoCadaJugador(int rondas, string nombreJugador[3], int dado[], int Puntaje[], int nroJugador, int tiradaGeneral, int puntero = 0) {
     int resultado, opciones, result, tirada = 0;
     int contador = 0;
     int acumuladorPuntajes;
@@ -88,11 +88,11 @@ int turnoCadaJugador(int rondas, char nombreJugador[5][30], int dado[], int Punt
 
 }
 
-char* guardarNombreJugador(char nombre[5][30], int nroJugador) {
-    return nombre[nroJugador-1];
-}
+//char* guardarNombreJugador(string nombre[3], int nroJugador) {
+//    return nombre[nroJugador-1];
+//}
 
-void guardarDatosGanadores(int puntos, char nombre[5][30], int tiradas, int nroJugador, string guardarPuntajes[1][3]) {
+void guardarDatosGanadores(int puntos, string nombre[3], int tiradas, int nroJugador, string guardarPuntajes[1][3]) {
 
     string nuevosPuntos, nuevasTiradas;
     string nombreJugador;
@@ -114,7 +114,7 @@ void guardarDatosGanadores(int puntos, char nombre[5][30], int tiradas, int nroJ
             flag = true;
         }
 
-    nombreJugador = guardarNombreJugador(nombre, nroJugador);
+//    nombreJugador = guardarNombreJugador(nombre, nroJugador);
     nuevosPuntos = to_string(puntos);
     nuevasTiradas = to_string(tiradas);
 
@@ -127,7 +127,7 @@ void guardarDatosGanadores(int puntos, char nombre[5][30], int tiradas, int nroJ
 
 }
 
-void ganadorPartida(int ptosJugador1, char nombre[5][30], string puntajes[1][3], int totalTiradas, int nroJugador,
+void ganadorPartida(int ptosJugador1, string nombre[3], string puntajes[1][3], int totalTiradas, int nroJugador,
                     int ptosJugador2 = 0, int totalTiradas2 = 0, int nroJugador2 = 0) {
 
     cout<<"HORA DE SABER EL GANADOR"<<endl;
@@ -153,7 +153,7 @@ void ganadorPartida(int ptosJugador1, char nombre[5][30], string puntajes[1][3],
     }
 }
 
-void emptatePartida(int ptosJugador1, char nombre[5][30], string puntajes[1][3], int totalTiradas, int nroJugador,
+void emptatePartida(int ptosJugador1, string nombre[3], string puntajes[1][3], int totalTiradas, int nroJugador,
                     int ptosJugador2 = 0, int totalTiradas2 = 0, int nroJugador2 = 0) {
 
     cout<<"HORA DE SABER EL GANADOR"<<endl;
