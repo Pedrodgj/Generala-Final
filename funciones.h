@@ -16,16 +16,6 @@ void cargarNombreJugador (string nombre[3], int tam)
 
 };
 
-
-void mostrarNombresJugadores (string nombres[3], int tam)
-{
-    int i;
-    for(i=0; i<tam-1; i++)
-    {
-        cout<<"El nombre del jugador es: "<<nombres[i+1]<<endl;
-    }
-};
-
 void mostrarSoloJugador(string nombre[3], int pos)
 {
     cout<<nombre[pos-1];
@@ -283,7 +273,7 @@ int ganadorGenerala(int v[], int tam, int jugador)
     if(acumulador == 5)
     {
         system("cls");
-        cout<<"Has ganado la partida: "<<endl;
+        cout<<"Has ganado la partida"<<endl;
         mostrarVector(v, 5);
         cout<<"GENERALA SERVIDA 500ptos"<<endl;
         return 500;
@@ -347,9 +337,7 @@ void modificarDados(int opciones, int dado[])
         {
             cin>>eleccion;
             modificarIndex = eleccion - 1;
-            cout<<"modificar Index "<<modificarIndex<<endl;
             dado[modificarIndex] = (rand()%6)+1;
-            cout<<"modificar dado "<<dado[modificarIndex]<<endl;
         };
         mostrarVector(dado, 5);
 

@@ -143,12 +143,13 @@ void jugarDosJugador() {
             system("cls");
             cout<<"Los puntos del partipante "; mostrarSoloJugador(nombreJugador, 2);
             cout<<" "<<acumuladorPuntajes2<<endl;
+            cout<<endl;
 
         }
 
         if(rondas != 10) {
             cout<<"\nProximo Turno de: "; mostrarSoloJugador(nombreJugador, 1);
-            cout<<"\nLos puntos del partipante "; mostrarSoloJugador(nombreJugador, 1);
+            cout<<"\nLos puntos del participante "; mostrarSoloJugador(nombreJugador, 1);
             cout<<" "<<acumuladorPuntajes1<<endl;
             cout<<"Tirada General "<<tirada1<<" -- Ronda: "<<rondas+1<<endl;
             system("pause");

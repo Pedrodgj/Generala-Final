@@ -27,8 +27,8 @@ int turnoCadaJugador(int rondas, string nombreJugador[3], int dado[], int Puntaj
         cout<<"  |  Ronda N"<<(char) 167<<" "<<rondas+1;
         cout<<"  |  Puntaje Total: "<<acumuladorPuntajes<<endl;
         //TODO: DESCOMENTAR CARGAR ALEATORIO Y COMENTAR CARGAR MANUAL
-        cargarManualmenteVector(dado);
-        //cargarAleatorio(dado, 5, 6);
+        //cargarManualmenteVector(dado);
+        cargarAleatorio(dado, 5, 6);
         mostrarVector(dado, 5);
         cout<<endl;
 
@@ -59,6 +59,8 @@ int turnoCadaJugador(int rondas, string nombreJugador[3], int dado[], int Puntaj
                     //system("pause");
                     system("cls");
                     cout<<"Turno de "; mostrarSoloJugador(nombreJugador, nroJugador);
+                    cout<<"  |  Ronda N"<<(char) 167<<" "<<rondas+1;
+                    cout<<"  |  Puntaje Total: "<<acumuladorPuntajes<<endl;
                     cout<<endl;
                     mostrarVector(dado, 5);
                     cout<<endl;
@@ -73,7 +75,9 @@ int turnoCadaJugador(int rondas, string nombreJugador[3], int dado[], int Puntaj
             }
 
         system("cls");
-        mostrarSoloJugador(nombreJugador, nroJugador); cout<<endl;
+        cout<<"Jugador: "; mostrarSoloJugador(nombreJugador, nroJugador);
+        cout<<"  |  Ronda N"<<(char) 167<<" "<<rondas+1;
+        cout<<"  |  Puntaje Total: "<<acumuladorPuntajes<<endl;
         mostrarVector(dado, 5);
         //aca en resultado guarda la cantidad de puntos que el participante
         //obtuvo y eligio de la ronda
@@ -87,10 +91,6 @@ int turnoCadaJugador(int rondas, string nombreJugador[3], int dado[], int Puntaj
         return tiradaGeneral;
 
 }
-
-//char* guardarNombreJugador(string nombre[3], int nroJugador) {
-//    return nombre[nroJugador-1];
-//}
 
 void guardarDatosGanadores(int puntos, string nombre[3], int tiradas, int nroJugador, string guardarPuntajes[1][3]) {
 
@@ -120,7 +120,7 @@ void guardarDatosGanadores(int puntos, string nombre[3], int tiradas, int nroJug
 
 
         if(guardarPuntajes[0][0]== "0" || flag == true) {
-            guardarPuntajes[0][0] = nombreJugador;
+            guardarPuntajes[0][0] = nombre[nroJugador-1];
             guardarPuntajes[0][1] = nuevosPuntos;
             guardarPuntajes[0][2] = nuevasTiradas;
         }

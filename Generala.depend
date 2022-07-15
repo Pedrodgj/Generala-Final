@@ -184,3 +184,54 @@
 	"puntajes.h"
 	"funciones.h"
 
+1657854061 source:c:\users\galsi\desktop\generala-final\generala-final\main.cpp
+	<iostream>
+	<ctime>
+	<cstring>
+	<cstdlib>
+	<cstdio>
+	<ctype.h>
+	<wchar.h>
+	<locale.h>
+	"puntosMenu.h"
+	"puntajes.h"
+	"rondas.h"
+
+1657855763 c:\users\galsi\desktop\generala-final\generala-final\puntosmenu.h
+	"funciones.h"
+	"puntajes.h"
+	"rondas.h"
+
+1657854591 c:\users\galsi\desktop\generala-final\generala-final\funciones.h
+	"puntosMenu.h"
+	"funciones.h"
+	"graficos.h"
+
+1657854061 c:\users\galsi\desktop\generala-final\generala-final\graficos.h
+	"rlutil.h"
+	<windows.h>
+
+1657854061 c:\users\galsi\desktop\generala-final\generala-final\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1657854061 c:\users\galsi\desktop\generala-final\generala-final\puntajes.h
+	"funciones.h"
+	"puntosMenu.h"
+
+1657855668 c:\users\galsi\desktop\generala-final\generala-final\rondas.h
+	<string>
+	<iostream>
+	"puntajes.h"
+	"funciones.h"
+
