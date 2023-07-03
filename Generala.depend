@@ -235,3 +235,107 @@
 	"puntajes.h"
 	"funciones.h"
 
+1657854061 source:c:\users\galsi\desktop\generala-final\generala-final\generala-final\main.cpp
+	<iostream>
+	<ctime>
+	<cstring>
+	<cstdlib>
+	<cstdio>
+	<ctype.h>
+	<wchar.h>
+	<locale.h>
+	"puntosMenu.h"
+	"puntajes.h"
+	"rondas.h"
+
+1657894021 c:\users\galsi\desktop\generala-final\generala-final\generala-final\puntosmenu.h
+	"funciones.h"
+	"puntajes.h"
+	"rondas.h"
+
+1657894021 c:\users\galsi\desktop\generala-final\generala-final\generala-final\funciones.h
+	"puntosMenu.h"
+	"funciones.h"
+	"graficos.h"
+
+1657894026 c:\users\galsi\desktop\generala-final\generala-final\generala-final\graficos.h
+	"rlutil.h"
+	<windows.h>
+
+1657854061 c:\users\galsi\desktop\generala-final\generala-final\generala-final\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1657894021 c:\users\galsi\desktop\generala-final\generala-final\generala-final\puntajes.h
+	"funciones.h"
+	"puntosMenu.h"
+
+1657894021 c:\users\galsi\desktop\generala-final\generala-final\generala-final\rondas.h
+	<string>
+	<iostream>
+	"puntajes.h"
+	"funciones.h"
+
+1681571321 source:c:\users\galsi\desktop\generala-final\generala-final2\generala-final\generala-final\main.cpp
+	<iostream>
+	<ctime>
+	<cstring>
+	<cstdlib>
+	<cstdio>
+	<ctype.h>
+	<wchar.h>
+	<locale.h>
+	"rlutil.h"
+	"puntosMenu.h"
+	"puntajes.h"
+	"rondas.h"
+
+1681525679 c:\users\galsi\desktop\generala-final\generala-final2\generala-final\generala-final\puntosmenu.h
+	<string>
+	"funciones.h"
+	"puntajes.h"
+	"rondas.h"
+
+1681581382 c:\users\galsi\desktop\generala-final\generala-final2\generala-final\generala-final\funciones.h
+	"puntosMenu.h"
+	"funciones.h"
+	"graficos.h"
+
+1657894026 c:\users\galsi\desktop\generala-final\generala-final2\generala-final\generala-final\graficos.h
+	"rlutil.h"
+	<windows.h>
+
+1681570645 c:\users\galsi\desktop\generala-final\generala-final2\generala-final\generala-final\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1681516858 c:\users\galsi\desktop\generala-final\generala-final2\generala-final\generala-final\puntajes.h
+	"funciones.h"
+	"puntosMenu.h"
+
+1681579691 c:\users\galsi\desktop\generala-final\generala-final2\generala-final\generala-final\rondas.h
+	<string>
+	<iostream>
+	"puntajes.h"
+	"funciones.h"
+

@@ -458,7 +458,7 @@ void dadoSeis(int iniX,int iniY)
             }
         }
     }
-};
+}
 
 
 

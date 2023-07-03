@@ -1,21 +1,31 @@
 #ifndef PUNTOSMENU_H_INCLUDED
 #define PUNTOSMENU_H_INCLUDED
 
+#include<string>
 #include "funciones.h"
 #include "puntajes.h"
 #include "rondas.h"
 
-string nombreJugador[2];
-string guardarPuntajes[1][3];
-//int puntajesFinal[100][2];
-int Puntaje1[10];
-int Puntaje2[10];
-int rondas, tirada1, tirada2;
-int acumuladorPuntajes1, acumuladorPuntajes2;
-int jugador1, jugador2;
+//
+//string nombreJugador[3];
+//string guardarPuntajes[1][3];
+////int puntajesFinal[100][2];
+//int Puntaje1[10];
+//int Puntaje2[10];
+//int rondas, tirada1, tirada2;
+//int acumuladorPuntajes1, acumuladorPuntajes2;
+//int jugador1, jugador2;
 
 //Jugador 1
-void jugarUnJugador() {
+void jugarUnJugador(string guardarPuntajes[][3]) {
+    string nombreJugador[3];
+//    string guardarPuntajes[1][3];
+    //int puntajesFinal[100][2];
+    int Puntaje1[10];
+//    int Puntaje2[10];
+    int tirada1;
+    int acumuladorPuntajes1;
+    int jugador1;
     int dado1[5];
     int rondas = 0;
     int tiradaAnterior = 1;
@@ -26,7 +36,7 @@ void jugarUnJugador() {
 
     system("cls");
 
-    cout<<"Ingrese nombre del jugador 1 "; cargarNombreJugador(nombreJugador, 0);
+     cout<<"Ingrese nombre del jugador 1 "; cargarNombreJugador(nombreJugador, 0);
 
     flag = puntajesEnCero(Puntaje1, flag);
 
@@ -60,11 +70,19 @@ void jugarUnJugador() {
     }
     system("pause");
     system("cls");
-};
+}
 
 
 //Jugador 2
-void jugarDosJugador() {
+void jugarDosJugador(string guardarPuntajes[][3]) {
+    string nombreJugador[3];
+//    string guardarPuntajes[1][3];
+    //int puntajesFinal[100][2];
+    int Puntaje1[10];
+    int Puntaje2[10];
+//    int rondas, tirada1, tirada2;
+//    int acumuladorPuntajes1, acumuladorPuntajes2;
+//    int jugador1, jugador2;
     int dado1[5], dado2[5];
     bool flag1 = false, flag2 = false;
     int rondas  = 0, tirada1 = 0, tirada2 = 0;
@@ -96,7 +114,7 @@ void jugarDosJugador() {
 
         if(tirada1 != 500) {
             tiradaAnterior1 = tirada1+1;
-        };
+        }
 
         if(tirada1 == 500) {
             cout<<"Estas en generala"<<endl;
@@ -114,7 +132,7 @@ void jugarDosJugador() {
         }
 
         cout<<"\nProximo Turno de: "; mostrarSoloJugador(nombreJugador, 2);
-        cout<<"\nLos puntos del partipante "; mostrarSoloJugador(nombreJugador, 2);
+        cout<<"\nLos puntos del participante "; mostrarSoloJugador(nombreJugador, 2);
         cout<<" "<<acumuladorPuntajes2<<endl;
         cout<<"Tirada General "<<tirada2<<" -- Ronda: "<<rondas+1<<endl;
         system("pause");
@@ -124,7 +142,7 @@ void jugarDosJugador() {
 
         if(tirada2 != 500) {
             tiradaAnterior2 = tirada2+1;
-        };
+        }
 
         if(tirada2 == 500) {
             cout<<"Estas en generala"<<endl;
@@ -174,10 +192,10 @@ void jugarDosJugador() {
 
     system("pause");
     system("cls");
-};
+}
 
 //Mostrar Record de puntaje
-void mostrarRecord () {
+void mostrarRecord (string guardarPuntajes[][3]) {
     int i, j;
 
     system("cls");
@@ -199,7 +217,7 @@ void mostrarRecord () {
     system("pause");
     system("cls");
 
-};
+}
 
 //Reglas generala
 void reglasGeneral () {
@@ -229,7 +247,7 @@ void reglasGeneral () {
             system("pause");
             system("cls");
 
-};
+}
 
 //COmbinacion puntajes
 void combinacionPuntaje () {
@@ -251,7 +269,63 @@ void combinacionPuntaje () {
 
     system("pause");
     system("cls");
-};
+}
+
+void modoTest(string guardarPuntajes[][3]) {
+    string nombreJugador[3];
+//    string guardarPuntajes[1][3];
+//    //int puntajesFinal[100][2];
+    int Puntaje1[10];
+//    int Puntaje2[10];
+    int tirada1;
+    int acumuladorPuntajes1;
+    int jugador1;
+    int dado1[5];
+    int rondas = 0;
+    int tiradaAnterior = 1;
+    bool flag = false;
+
+    jugador1 = 0, tirada1 = 0;
+    acumuladorPuntajes1 = 0;
+
+    system("cls");
+
+     cout<<"Ingrese nombre del jugador 1 "; cargarNombreJugador(nombreJugador, 0);
+
+    flag = puntajesEnCero(Puntaje1, flag);
+
+    while(rondas != 10) {
+
+
+        tirada1 = modoTest(rondas, nombreJugador, dado1, Puntaje1, 1, tirada1);
+        if(tirada1 != 500) {
+            tiradaAnterior = tirada1+1;
+        };
+
+        if(tirada1 == 500) {
+            cout<<"Estas en generala"<<endl;
+            rondas = 10;
+        } else {
+
+            acumuladorPuntajes1 = sumarPuntajes(Puntaje1);
+            cout<<"Los puntos del participante "; mostrarSoloJugador(nombreJugador, 1);
+            cout<<" "<<acumuladorPuntajes1;
+            mostrarPuntajes(Puntaje1);
+            cout<<"Tirada General "<<tirada1<<" -- Ronda: "<<rondas+1<<endl;
+            system("pause");
+            rondas++;
+        }
+    }
+    if(tirada1 == 500) {
+        ganadorPartida(500, nombreJugador, guardarPuntajes, tiradaAnterior, 1);
+    } else {
+        jugador1 = sumarPuntajes(Puntaje1);
+        ganadorPartida(jugador1, nombreJugador, guardarPuntajes, tirada1, 1);
+    }
+    system("pause");
+    system("cls");
+
+}
 
 
 #endif // PUNTOSMENU_H_INCLUDED

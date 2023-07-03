@@ -9,12 +9,10 @@
 //#include "puntajes.h"
 
 //Mostrar Nombre Jugador
-void cargarNombreJugador (string nombre[3], int tam)
+void cargarNombreJugador (string nombreJugador[3], int tam)
 {
-    int i;
-    cin>>nombre[tam];
-
-};
+    getline(cin, nombreJugador[tam]);
+}
 
 void mostrarSoloJugador(string nombre[3], int pos)
 {
@@ -30,7 +28,7 @@ void cargarAleatorio(int v[], int tam, int limite)
     {
         v[i]=(rand()%limite)+1;
     }
-};
+}
 
 void cargarManualmenteVector (int v[])
 {
@@ -203,7 +201,7 @@ void mostrarVector(int v[], int tam)
     }
     cout<<endl;
     cout<<endl;
-};
+}
 
 //ordenar Vector
 void ordenarVector(int v[], int tam)
@@ -235,13 +233,13 @@ bool puntajesEnCero(int Puntaje[], bool flag)
         for(i = 0; i < 10; i++)
         {
             Puntaje[i] = -1;
-        };
+        }
         return true;
-    };
+    }
     return false;
 }
 
-void iniciarRegistroEn0 (string guardarPuntajes[1][3])
+void iniciarRegistroEn0 (string guardarPuntajes[][3])
 {
     int k, l;
     for(k=0; k<1; k++)
@@ -265,7 +263,7 @@ int ganadorGenerala(int v[], int tam, int jugador)
         if(esGenerala == v[i])
         {
             acumulador++;
-        };
+        }
     }
 
 
@@ -314,8 +312,8 @@ void mostrarPuntajes(int puntajes[])
         else
         {
             cout<<"\n"<<j + 1<<" "<<puntajesNombre[j]<<" Puntaje: "<<puntajes[j]<<endl;
-        };
-    };
+        }
+    }
 }
 
 
@@ -338,21 +336,21 @@ void modificarDados(int opciones, int dado[])
             cin>>eleccion;
             modificarIndex = eleccion - 1;
             dado[modificarIndex] = (rand()%6)+1;
-        };
+        }
         mostrarVector(dado, 5);
 
     }
-};
+}
 
 void showItem(const char* text, int posx, int posy, bool selected)
 
 {
     if(selected)
-
     {
         rlutil::setBackgroundColor(rlutil::color::RED);
         rlutil::locate(posx - 3, posy);
         std::cout<< " " << (char)175 << " " << text << " " << (char)174 << " " <<std:: endl;
+        rlutil::setBackgroundColor(rlutil::color::BLACK);
     }
     else
     {
@@ -360,8 +358,121 @@ void showItem(const char* text, int posx, int posy, bool selected)
         rlutil::locate(posx-3, posy);
         std::cout<< "   " << text << "   " << std::endl;
     }
+    rlutil::setBackgroundColor(rlutil::color::BLACK);
+}
 
-};
+int eleccionOpc(const char *text1, const char *text2 = "", const char *text3 = "") {
+//    system("cls");
+    int y =0;
+    bool valu = true;
+    int key;
+    while(valu) {
+
+    rlutil::hidecursor();
+
+    if(text3 == "") {
+        showItem(text1, 40, 16, y==0);
+        key = rlutil::getkey();
+        switch(key)
+            {
+            case 14:
+                rlutil::locate(48, 10 + y);
+                std::cout<< " " <<std::endl;
+                y--;
+                if(y<0)
+                {
+                    y=1;
+                }
+                break;
+            case 15:
+                rlutil::locate(48, 10 + y);
+                std::cout<< " " <<std::endl;
+                y++;
+                if(y>1)
+                {
+                    y=2;
+                }
+                break;
+            case 1:
+                switch(y)
+                {
+                case 1:
+                    valu = false;
+                    system("cls");
+                    return 1;
+                    break;
+                case 2:
+                    valu = false;
+                    system("cls");
+                    return 2;
+                    break;
+                case 3:
+                    valu = false;
+                    system("cls");
+                    return 2;
+                    break;
+                case 4:
+                    valu = false;
+                    system("cls");
+                    return 2;
+                    break;
+                case 5:
+                    valu = false;
+                    system("cls");
+                    return 2;
+                    break;
+                default:
+                    break;
+                }
+            }
+        }
+
+
+    showItem(text1, 40, 16, y==0);
+    showItem(text2, 40, 18, y==1);
+    showItem(text3, 40, 20, y==2);
+    key = rlutil::getkey();
+    switch(key)
+        {
+        case 14:
+            rlutil::locate(48, 10 + y);
+            std::cout<< " " <<std::endl;
+            y--;
+            if(y<0)
+            {
+                y=1;
+            }
+            break;
+        case 15:
+            rlutil::locate(48, 10 + y);
+            std::cout<< " " <<std::endl;
+            y++;
+            if(y>1)
+            {
+                y=2;
+            }
+            break;
+        case 1:
+            switch(y)
+            {
+            case 1:
+                valu = false;
+                system("cls");
+                return 1;
+                break;
+            case 2:
+                valu = false;
+                system("cls");
+                return 2;
+                break;
+            default:
+                break;
+            }
+        }
+    }
+//    system("pause");
+//    system("cls");
+}
 
 
 

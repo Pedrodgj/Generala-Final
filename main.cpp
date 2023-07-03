@@ -7,7 +7,7 @@
 #include <wchar.h>
 #include <locale.h>
 
-
+#include "rlutil.h"
 using namespace std;
 
 #include "puntosMenu.h"
@@ -16,22 +16,23 @@ using namespace std;
 
 int main()
 { //Menu general para jugar o ver puntajes
+    rlutil::setBackgroundColor(2);
+    string guardarPuntajes[5][3];
 
     int opc = 1, y=0 ;
     while(true)
     {
-
-
         rlutil::hidecursor();
 
-
+//        rlutil::setColor(3);
         showItem("------MENU GENERALA------", 50, 10, y==0);
         showItem("JUEGO DE 1 JUGADOR       ", 50, 12, y==1);
         showItem("JUEGO DE 2 JUGADORES     ", 50, 14, y==2);
         showItem("RECORD DE PUNTAJES       ", 50, 16, y==3);
         showItem("COMBINACIONES DE PUNTAJES", 50, 18, y==4);
         showItem("REGLAS DEL JUEGO         ", 50, 20, y==5);
-        showItem("SALIR DEL JUEGO          ", 50, 22, y==6);
+        showItem("MODO TEST                ", 50, 22, y==6);
+        showItem("SALIR DEL JUEGO          ", 50, 24, y==7);
 
         int key = rlutil::getkey();
         switch(key)
@@ -58,13 +59,13 @@ int main()
             switch(y)
             {
             case 1:
-                jugarUnJugador();
+                jugarUnJugador(guardarPuntajes);
                 break;
             case 2:
-                jugarDosJugador();
+                jugarDosJugador(guardarPuntajes);
                 break;
             case 3:
-                mostrarRecord();
+                mostrarRecord(guardarPuntajes);
                 break;
             case 4:
                 combinacionPuntaje();
@@ -73,6 +74,9 @@ int main()
                 reglasGeneral();
                 break;
             case 6:
+                modoTest(guardarPuntajes);
+                break;
+            case 7:
                 return 0;
                 break;
             default:

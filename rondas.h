@@ -47,13 +47,47 @@ int turnoCadaJugador(int rondas, string nombreJugador[3], int dado[], int Puntaj
                 } else if(puntero == 1){
                     return -1;
                 }
-            };
+            }
+            int y=0;
+            const char *text1 = "Decida: Obtener Puntajes - Lanzar Dados de nuevo";
+            const char *text2 = "-Obtener Puntajes-";
+            const char *text3 = "-Lanzar Dados de nuevo-";
 
-            cout<<"\n"<<(char) 168<<"Desea obtener el puntaje de esta combinacion o desea lanzar los dados de nuevo?"<<endl;
-            cout<<"Presione 1 para obtener puntaje. Presione 2 para lanzar los dados de nuevo"<<endl;
-            cin>>result;
+            result = eleccionOpc(text1, text2, text3);
+//            rlutil::hidecursor();
+//             showItem("Desea obtener el puntaje de esta combinacion", 40, 10, y==0);
+//             showItem("Desea lanzar los dados de nuevo?", 40, 12, y==1);
+//             int key = rlutil::getkey();
+//             cout<<"KEY"<<key<<endl<<endl;
+//             switch(key)
+//        {
+//        case 14:
+//            rlutil::locate(48, 10 + y);
+//            std::cout<< " " <<std::endl;
+//            y--;
+//            if(y<0)
+//            {
+//                y=0;
+//            }
+//            break;
+//        case 15:
+//            rlutil::locate(48, 10 + y);
+//            std::cout<< " " <<std::endl;
+//            y++;
+//            if(y>6)
+//            {
+//                y=7;
+//            }
+//            break;
+//            default:
+//                break;
+//        }
+//            cout<<"\n"<<(char) 168<<"Desea obtener el puntaje de esta combinacion o desea lanzar los dados de nuevo?"<<endl;
+//            cout<<"Presione 1 para obtener puntaje. Presione 2 para lanzar los dados de nuevo"<<endl;
+//            cin>>result;
 
                 if(result == 2) {
+                    mostrarVector(dado, 5);
                     cout<<(char) 168<<"Cuantos deseas modificar?"<<endl; cin>>opciones;
                     modificarDados(opciones, dado);
                     //system("pause");
@@ -71,7 +105,7 @@ int turnoCadaJugador(int rondas, string nombreJugador[3], int dado[], int Puntaj
                     }
                 } else {
                     contador = 2;
-                };
+                }
             }
 
         system("cls");
@@ -81,7 +115,7 @@ int turnoCadaJugador(int rondas, string nombreJugador[3], int dado[], int Puntaj
         mostrarVector(dado, 5);
         //aca en resultado guarda la cantidad de puntos que el participante
         //obtuvo y eligio de la ronda
-        resultado = puntajesGanadores(dado, Puntaje, 1);
+        resultado = puntajesGanadores(dado, Puntaje, 1, true);
         Puntaje[resultado];
 
         system("pause");
@@ -92,7 +126,7 @@ int turnoCadaJugador(int rondas, string nombreJugador[3], int dado[], int Puntaj
 
 }
 
-void guardarDatosGanadores(int puntos, string nombre[3], int tiradas, int nroJugador, string guardarPuntajes[1][3]) {
+void guardarDatosGanadores(int puntos, string nombre[3], int tiradas, int nroJugador, string guardarPuntajes[][3]) {
 
     string nuevosPuntos, nuevasTiradas;
     string nombreJugador;
@@ -127,7 +161,7 @@ void guardarDatosGanadores(int puntos, string nombre[3], int tiradas, int nroJug
 
 }
 
-void ganadorPartida(int ptosJugador1, string nombre[3], string puntajes[1][3], int totalTiradas, int nroJugador,
+void ganadorPartida(int ptosJugador1, string nombre[3], string puntajes[][3], int totalTiradas, int nroJugador,
                     int ptosJugador2 = 0, int totalTiradas2 = 0, int nroJugador2 = 0) {
 
     cout<<"HORA DE SABER EL GANADOR"<<endl;
@@ -177,6 +211,88 @@ void emptatePartida(int ptosJugador1, string nombre[3], string puntajes[1][3], i
         cout<<"EL GANADOR ES EL JUGADOR "; mostrarSoloJugador(nombre, nroJugador2);
         cout<<" CON UN PUNTAJE DE "<<ptosJugador2<<" CON UN TOTAL DE TIRADAS DE "<<totalTiradas2<<endl;
     }
+}
+
+int modoTest(int rondas, string nombreJugador[3], int dado[], int Puntaje[], int nroJugador, int tiradaGeneral, int puntero = 0) {
+    int resultado, opciones, result, tirada = 0;
+    int contador = 0;
+    int acumuladorPuntajes;
+    int generalaServida = 0;
+
+        system("cls");
+        cout<<"Listo para lanzar los dados "<<endl;
+        mostrarSoloJugador(nombreJugador, nroJugador); cout<<endl;
+        system("pause");
+        system("cls");
+
+        acumuladorPuntajes = sumarPuntajes(Puntaje);
+
+        cout<<"Turno de "; mostrarSoloJugador(nombreJugador, nroJugador);
+        cout<<"  |  Ronda N"<<(char) 167<<" "<<rondas+1;
+        cout<<"  |  Puntaje Total: "<<acumuladorPuntajes<<endl;
+        //TODO: DESCOMENTAR CARGAR ALEATORIO Y COMENTAR CARGAR MANUAL
+        cargarManualmenteVector(dado);
+//        cargarAleatorio(dado, 5, 6);
+        mostrarVector(dado, 5);
+        cout<<endl;
+
+        while(contador != 2) {
+            rlutil::locate(1,14);
+            tirada++;
+            tiradaGeneral++;
+            cout<<"Tirada N"<<(char) 167<<" : "<<tirada<<" -- Tiradas Totales: "<<tiradaGeneral<<endl;
+
+            resultado = puntajesGanadores(dado, Puntaje);
+
+            if(tirada == 1) {
+                generalaServida = ganadorGenerala(dado, 5, nroJugador);
+                if(generalaServida == 500) {
+                    return generalaServida;
+                } else if(puntero == 1){
+                    return -1;
+                }
+            }
+
+            cout<<"\n"<<(char) 168<<"Desea obtener el puntaje de esta combinacion o desea lanzar los dados de nuevo?"<<endl;
+            cout<<"Presione 1 para obtener puntaje. Presione 2 para lanzar los dados de nuevo"<<endl;
+            cin>>result;
+
+                if(result == 2) {
+                    cout<<(char) 168<<"Cuantos deseas modificar?"<<endl; cin>>opciones;
+                    modificarDados(opciones, dado);
+                    //system("pause");
+                    system("cls");
+                    cout<<"Turno de "; mostrarSoloJugador(nombreJugador, nroJugador);
+                    cout<<"  |  Ronda N"<<(char) 167<<" "<<rondas+1;
+                    cout<<"  |  Puntaje Total: "<<acumuladorPuntajes<<endl;
+                    cout<<endl;
+                    mostrarVector(dado, 5);
+                    cout<<endl;
+                    contador++;
+                    if(contador == 2) {
+                        tirada++,
+                        tiradaGeneral++;
+                    }
+                } else {
+                    contador = 2;
+                }
+            }
+
+        system("cls");
+        cout<<"Jugador: "; mostrarSoloJugador(nombreJugador, nroJugador);
+        cout<<"  |  Ronda N"<<(char) 167<<" "<<rondas+1;
+        cout<<"  |  Puntaje Total: "<<acumuladorPuntajes<<endl;
+        mostrarVector(dado, 5);
+        //aca en resultado guarda la cantidad de puntos que el participante
+        //obtuvo y eligio de la ronda
+        resultado = puntajesGanadores(dado, Puntaje, 1, true);
+        Puntaje[resultado];
+
+        system("pause");
+        system("cls");
+
+        contador = 0;
+        return tiradaGeneral;
 }
 
 
