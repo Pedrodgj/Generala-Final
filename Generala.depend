@@ -1,0 +1,341 @@
+# depslib dependency file v1.0
+1657416335 source:c:\users\galsi\desktop\universidad  utn\1 cuatrimestre\lab programacion 1\proyetopractica\generala\main.cpp
+	<iostream>
+	<ctime>
+	<cstring>
+	<cstdlib>
+	<cstdio>
+	<ctype.h>
+	<wchar.h>
+	<locale.h>
+	"puntosMenu.h"
+	"puntajes.h"
+	"funciones.h"
+	"rondas.h"
+
+1657415609 c:\users\galsi\desktop\universidad  utn\1 cuatrimestre\lab programacion 1\proyetopractica\generala\funciones.h
+	"puntosMenu.h"
+
+1657416991 c:\users\galsi\desktop\universidad  utn\1 cuatrimestre\lab programacion 1\proyetopractica\generala\puntosmenu.h
+	"funciones.h"
+	"puntajes.h"
+	"rondas.h"
+
+1657415515 c:\users\galsi\desktop\universidad  utn\1 cuatrimestre\lab programacion 1\proyetopractica\generala\puntajes.h
+	"funciones.h"
+	"puntosMenu.h"
+
+1657415323 c:\users\galsi\desktop\universidad  utn\1 cuatrimestre\lab programacion 1\proyetopractica\generala\rondas.h
+	<string>
+	<iostream>
+	"puntajes.h"
+	"funciones.h"
+
+1657755159 source:c:\users\dieeg\onedrive\desktop\utn frgp programacion 2022\proyecto-generala\main.cpp
+	<iostream>
+	<ctime>
+	<cstring>
+	<cstdlib>
+	<cstdio>
+	<ctype.h>
+	<wchar.h>
+	<locale.h>
+	"puntosMenu.h"
+	"puntajes.h"
+	"rondas.h"
+
+1657653352 c:\users\dieeg\onedrive\desktop\utn frgp programacion 2022\proyecto-generala\puntosmenu.h
+	"funciones.h"
+	"puntajes.h"
+	"rondas.h"
+
+1657654601 c:\users\dieeg\onedrive\desktop\utn frgp programacion 2022\proyecto-generala\funciones.h
+	"puntosMenu.h"
+	"funciones.h"
+	"graficos.h"
+
+1657492468 c:\users\dieeg\onedrive\desktop\utn frgp programacion 2022\proyecto-generala\puntajes.h
+	"funciones.h"
+	"puntosMenu.h"
+
+1657654320 c:\users\dieeg\onedrive\desktop\utn frgp programacion 2022\proyecto-generala\rondas.h
+	<string>
+	<iostream>
+	"puntajes.h"
+	"funciones.h"
+
+1657650793 c:\users\dieeg\onedrive\desktop\utn frgp programacion 2022\proyecto-generala\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1657651279 c:\users\dieeg\onedrive\desktop\utn frgp programacion 2022\proyecto-generala\graficos.h
+	"rlutil.h"
+	<windows.h>
+
+1657759908 source:c:\users\galsi\desktop\universidad  utn\1 cuatrimestre\lab programacion 1\laboratorio 1\proyecto-generala-dise-ografico\main.cpp
+	<iostream>
+	<ctime>
+	<cstring>
+	<cstdlib>
+	<cstdio>
+	<ctype.h>
+	<wchar.h>
+	<locale.h>
+	"puntosMenu.h"
+	"puntajes.h"
+	"rondas.h"
+
+1657759626 c:\users\galsi\desktop\universidad  utn\1 cuatrimestre\lab programacion 1\laboratorio 1\proyecto-generala-dise-ografico\puntosmenu.h
+	"funciones.h"
+	"puntajes.h"
+	"rondas.h"
+
+1657761389 c:\users\galsi\desktop\universidad  utn\1 cuatrimestre\lab programacion 1\laboratorio 1\proyecto-generala-dise-ografico\funciones.h
+	"puntosMenu.h"
+	"funciones.h"
+	"graficos.h"
+
+1657756757 c:\users\galsi\desktop\universidad  utn\1 cuatrimestre\lab programacion 1\laboratorio 1\proyecto-generala-dise-ografico\graficos.h
+	"rlutil.h"
+	<windows.h>
+
+1657756757 c:\users\galsi\desktop\universidad  utn\1 cuatrimestre\lab programacion 1\laboratorio 1\proyecto-generala-dise-ografico\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1657761488 c:\users\galsi\desktop\universidad  utn\1 cuatrimestre\lab programacion 1\laboratorio 1\proyecto-generala-dise-ografico\puntajes.h
+	"funciones.h"
+	"puntosMenu.h"
+
+1657760203 c:\users\galsi\desktop\universidad  utn\1 cuatrimestre\lab programacion 1\laboratorio 1\proyecto-generala-dise-ografico\rondas.h
+	<string>
+	<iostream>
+	"puntajes.h"
+	"funciones.h"
+
+1657837930 source:d:\escritorio\proyectopedro\generala-final\main.cpp
+	<iostream>
+	<ctime>
+	<cstring>
+	<cstdlib>
+	<cstdio>
+	<ctype.h>
+	<wchar.h>
+	<locale.h>
+	"puntosMenu.h"
+	"puntajes.h"
+	"rondas.h"
+
+1657838512 d:\escritorio\proyectopedro\generala-final\puntosmenu.h
+	"funciones.h"
+	"puntajes.h"
+	"rondas.h"
+
+1657838623 d:\escritorio\proyectopedro\generala-final\funciones.h
+	"puntosMenu.h"
+	"funciones.h"
+	"graficos.h"
+
+1657837930 d:\escritorio\proyectopedro\generala-final\graficos.h
+	"rlutil.h"
+	<windows.h>
+
+1657837930 d:\escritorio\proyectopedro\generala-final\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1657837930 d:\escritorio\proyectopedro\generala-final\puntajes.h
+	"funciones.h"
+	"puntosMenu.h"
+
+1657838646 d:\escritorio\proyectopedro\generala-final\rondas.h
+	<string>
+	<iostream>
+	"puntajes.h"
+	"funciones.h"
+
+1657854061 source:c:\users\galsi\desktop\generala-final\generala-final\main.cpp
+	<iostream>
+	<ctime>
+	<cstring>
+	<cstdlib>
+	<cstdio>
+	<ctype.h>
+	<wchar.h>
+	<locale.h>
+	"puntosMenu.h"
+	"puntajes.h"
+	"rondas.h"
+
+1657855763 c:\users\galsi\desktop\generala-final\generala-final\puntosmenu.h
+	"funciones.h"
+	"puntajes.h"
+	"rondas.h"
+
+1657854591 c:\users\galsi\desktop\generala-final\generala-final\funciones.h
+	"puntosMenu.h"
+	"funciones.h"
+	"graficos.h"
+
+1657854061 c:\users\galsi\desktop\generala-final\generala-final\graficos.h
+	"rlutil.h"
+	<windows.h>
+
+1657854061 c:\users\galsi\desktop\generala-final\generala-final\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1657854061 c:\users\galsi\desktop\generala-final\generala-final\puntajes.h
+	"funciones.h"
+	"puntosMenu.h"
+
+1657855668 c:\users\galsi\desktop\generala-final\generala-final\rondas.h
+	<string>
+	<iostream>
+	"puntajes.h"
+	"funciones.h"
+
+1657854061 source:c:\users\galsi\desktop\generala-final\generala-final\generala-final\main.cpp
+	<iostream>
+	<ctime>
+	<cstring>
+	<cstdlib>
+	<cstdio>
+	<ctype.h>
+	<wchar.h>
+	<locale.h>
+	"puntosMenu.h"
+	"puntajes.h"
+	"rondas.h"
+
+1657894021 c:\users\galsi\desktop\generala-final\generala-final\generala-final\puntosmenu.h
+	"funciones.h"
+	"puntajes.h"
+	"rondas.h"
+
+1657894021 c:\users\galsi\desktop\generala-final\generala-final\generala-final\funciones.h
+	"puntosMenu.h"
+	"funciones.h"
+	"graficos.h"
+
+1657894026 c:\users\galsi\desktop\generala-final\generala-final\generala-final\graficos.h
+	"rlutil.h"
+	<windows.h>
+
+1657854061 c:\users\galsi\desktop\generala-final\generala-final\generala-final\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1657894021 c:\users\galsi\desktop\generala-final\generala-final\generala-final\puntajes.h
+	"funciones.h"
+	"puntosMenu.h"
+
+1657894021 c:\users\galsi\desktop\generala-final\generala-final\generala-final\rondas.h
+	<string>
+	<iostream>
+	"puntajes.h"
+	"funciones.h"
+
+1681571321 source:c:\users\galsi\desktop\generala-final\generala-final2\generala-final\generala-final\main.cpp
+	<iostream>
+	<ctime>
+	<cstring>
+	<cstdlib>
+	<cstdio>
+	<ctype.h>
+	<wchar.h>
+	<locale.h>
+	"rlutil.h"
+	"puntosMenu.h"
+	"puntajes.h"
+	"rondas.h"
+
+1681525679 c:\users\galsi\desktop\generala-final\generala-final2\generala-final\generala-final\puntosmenu.h
+	<string>
+	"funciones.h"
+	"puntajes.h"
+	"rondas.h"
+
+1681581382 c:\users\galsi\desktop\generala-final\generala-final2\generala-final\generala-final\funciones.h
+	"puntosMenu.h"
+	"funciones.h"
+	"graficos.h"
+
+1657894026 c:\users\galsi\desktop\generala-final\generala-final2\generala-final\generala-final\graficos.h
+	"rlutil.h"
+	<windows.h>
+
+1681570645 c:\users\galsi\desktop\generala-final\generala-final2\generala-final\generala-final\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1681516858 c:\users\galsi\desktop\generala-final\generala-final2\generala-final\generala-final\puntajes.h
+	"funciones.h"
+	"puntosMenu.h"
+
+1681579691 c:\users\galsi\desktop\generala-final\generala-final2\generala-final\generala-final\rondas.h
+	<string>
+	<iostream>
+	"puntajes.h"
+	"funciones.h"
+
