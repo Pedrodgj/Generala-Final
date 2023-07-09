@@ -9,14 +9,32 @@
 //#include "puntajes.h"
 
 //Mostrar Nombre Jugador
-void cargarNombreJugador (string nombreJugador[3], int tam)
+int elegirDadosLanzar();
+
+void centrarTexto(const string& texto, int altura = 1) {
+    int anchuraConsola = rlutil::tcols();
+    int anchuraTexto = texto.length();
+    int margenIzquierdo = (anchuraConsola - anchuraTexto) / 2;
+    rlutil::locate(margenIzquierdo, altura);
+    cout << texto <<endl;
+}
+
+void cargarNombreJugador (string nombreJugador[3], int tam, int height = 2)
 {
+    int consoleWidth = rlutil::tcols();
+    int marginLeft = (consoleWidth) / 2;
+    rlutil::locate(marginLeft, height);
     getline(cin, nombreJugador[tam]);
 }
 
-void mostrarSoloJugador(string nombre[3], int pos)
+void mostrarSoloJugador(string nombre[3], int pos, bool flag = false, int altura = 2)
 {
-    cout<<nombre[pos-1];
+    if(!flag) {
+        cout<<nombre[pos-1];
+    } else {
+        string nombreCentral = nombre[pos-1];
+        centrarTexto(nombreCentral, altura);
+    }
 }
 
 //Cargar un Vector aleatorio
@@ -51,9 +69,6 @@ void mostrarVector(int v[], int tam)
     {
 
         {
-
-
-
             switch(v[0])
             {
 
@@ -200,7 +215,6 @@ void mostrarVector(int v[], int tam)
         }
     }
     cout<<endl;
-    cout<<endl;
 }
 
 //ordenar Vector
@@ -318,9 +332,10 @@ void mostrarPuntajes(int puntajes[])
 
 
 //modificar dados
-void modificarDados(int opciones, int dado[])
+void modificarDados(int opciones, int dado[], bool isTest = false)
 {
-    int i, eleccion, modificarIndex;
+    int i, eleccion, modificarIndex, manual;
+    system("cls");
 
     //Si deseas modificar los 5 dados se crea un nuevo vector
     if(opciones == 5)
@@ -331,14 +346,21 @@ void modificarDados(int opciones, int dado[])
     else
     {
         cout<<"Cuales dados deseas cambiar?"<<endl;
+        mostrarVector(dado, 5);
         for(i = 0; i < opciones; i++)
         {
-            cin>>eleccion;
+            eleccion = elegirDadosLanzar();
             modificarIndex = eleccion - 1;
-            dado[modificarIndex] = (rand()%6)+1;
+            if(isTest) {
+            centrarTexto("Ingrese valor del dado", 2);
+            cin>>manual;
+            dado[modificarIndex] = manual;
+            } else {
+                dado[modificarIndex] = (rand()%6)+1;
+            }
+            cout<<"\n\n\n\n\n\nSelecciono el dado "<<eleccion<<endl;
         }
         mostrarVector(dado, 5);
-
     }
 }
 
@@ -361,19 +383,24 @@ void showItem(const char* text, int posx, int posy, bool selected)
     rlutil::setBackgroundColor(rlutil::color::BLACK);
 }
 
-int eleccionOpc(const char *text1, const char *text2 = "", const char *text3 = "") {
-//    system("cls");
+int eleccionOpc()
+{
+    const char *text1 = "Decida: ";
+    const char *text2 = "-Obtener Puntajes-";
+    const char *text3 = "-Lanzar Dados de nuevo-";
     int y =0;
     bool valu = true;
     int key;
-    while(valu) {
+    while(valu)
+    {
 
-    rlutil::hidecursor();
+        rlutil::hidecursor();
 
-    if(text3 == "") {
-        showItem(text1, 40, 16, y==0);
-        key = rlutil::getkey();
-        switch(key)
+        if(text3 == "")
+        {
+            showItem(text1, 40, 16, y==0);
+            key = rlutil::getkey();
+            switch(key)
             {
             case 14:
                 rlutil::locate(48, 10 + y);
@@ -406,21 +433,6 @@ int eleccionOpc(const char *text1, const char *text2 = "", const char *text3 = "
                     system("cls");
                     return 2;
                     break;
-                case 3:
-                    valu = false;
-                    system("cls");
-                    return 2;
-                    break;
-                case 4:
-                    valu = false;
-                    system("cls");
-                    return 2;
-                    break;
-                case 5:
-                    valu = false;
-                    system("cls");
-                    return 2;
-                    break;
                 default:
                     break;
                 }
@@ -428,11 +440,11 @@ int eleccionOpc(const char *text1, const char *text2 = "", const char *text3 = "
         }
 
 
-    showItem(text1, 40, 16, y==0);
-    showItem(text2, 40, 18, y==1);
-    showItem(text3, 40, 20, y==2);
-    key = rlutil::getkey();
-    switch(key)
+        showItem(text1, 60, 14, y==0);
+        showItem(text2, 60, 16, y==1);
+        showItem(text3, 60, 18, y==2);
+        key = rlutil::getkey();
+        switch(key)
         {
         case 14:
             rlutil::locate(48, 10 + y);
@@ -470,9 +482,213 @@ int eleccionOpc(const char *text1, const char *text2 = "", const char *text3 = "
             }
         }
     }
-//    system("pause");
-//    system("cls");
 }
+
+int elegir()
+{
+    int y=0;
+    while(true)
+    {
+        rlutil::hidecursor();
+        showItem("<---", 35, 11, y==0);
+        showItem("<---", 35, 13, y==1);
+        showItem("<---", 35, 15, y==2);
+        showItem("<---", 35, 17, y==3);
+        showItem("<---", 35, 19, y==4);
+        showItem("<---", 35, 21, y==5);
+        showItem("<---", 35, 23, y==6);
+        showItem("<---", 35, 25, y==7);
+        showItem("<---", 35, 27, y==8);
+        showItem("<---", 35, 29, y==9);
+
+        int key = rlutil::getkey();
+        switch(key)
+        {
+        case 14:
+            rlutil::locate(48, 10 + y);
+            std::cout<< " " <<std::endl;
+            y--;
+            if(y<0)
+            {
+                y=0;
+            }
+            break;
+        case 15:
+            rlutil::locate(48, 10 + y);
+            std::cout<< " " <<std::endl;
+            y++;
+            if(y>9)
+            {
+                y=10;
+            }
+            break;
+        case 1:
+            switch(y)
+            {
+            case 0:
+                return 1;
+                break;
+            case 1:
+                return 2;
+                break;
+            case 2:
+                return 3;
+                break;
+            case 3:
+                return 4;
+                break;
+            case 4:
+                return 5;
+                break;
+            case 5:
+                return 6;
+                break;
+            case 6:
+                return 7;
+                break;
+            case 7:
+                return 8;
+                break;
+            case 8:
+                return 9;
+                break;
+            case 9:
+                return 10;
+                break;
+            default:
+                break;
+            }
+
+        default:
+            break;
+        }
+    }
+}
+
+int lanzarDadosDeNuevo()
+{
+    int y=0;
+    while(true)
+    {
+        rlutil::hidecursor();
+
+        showItem("1", 15, 12, y==0);
+        showItem("2", 15, 14, y==1);
+        showItem("3", 15, 16, y==2);
+        showItem("4", 15, 18, y==3);
+        showItem("5", 15, 20, y==4);
+
+        int key = rlutil::getkey();
+        switch(key)
+        {
+        case 14:
+            rlutil::locate(48, 10 + y);
+            std::cout<< " " <<std::endl;
+            y--;
+            if(y<0)
+            {
+                y=0;
+            }
+            break;
+        case 15:
+            rlutil::locate(48, 10 + y);
+            std::cout<< " " <<std::endl;
+            y++;
+            if(y>4)
+            {
+                y=5;
+            }
+            break;
+        case 1:
+            switch(y)
+            {
+            case 0:
+                return 1;
+                break;
+            case 1:
+                return 2;
+                break;
+            case 2:
+                return 3;
+                break;
+            case 3:
+                return 4;
+                break;
+            case 4:
+                return 5;
+                break;
+            default:
+                break;
+            }
+
+        default:
+            break;
+        }
+    }
+}
+
+int elegirDadosLanzar()
+{
+    int y=0;
+    while(true)
+    {
+        rlutil::hidecursor();
+
+        showItem("1*", 8, 4, y==0);
+        showItem("2*", 23, 4, y==1);
+        showItem("3*", 38, 4, y==2);
+        showItem("4*", 53, 4, y==3);
+        showItem("5*", 68, 4, y==4);
+
+        int key = rlutil::getkey();
+        switch(key)
+        {
+        case 14:
+            rlutil::locate(48, 10 + y);
+            std::cout<< " " <<std::endl;
+            y--;
+            if(y<0)
+            {
+                y=0;
+            }
+            break;
+        case 15:
+            rlutil::locate(48, 10 + y);
+            std::cout<< " " <<std::endl;
+            y++;
+            if(y>4)
+            {
+                y=4;
+            }
+            break;
+        case 1:
+            switch(y)
+            {
+            case 0:
+                return 1;
+                break;
+            case 1:
+                return 2;
+                break;
+            case 2:
+                return 3;
+                break;
+            case 3:
+                return 4;
+                break;
+            case 4:
+                return 5;
+                break;
+            default:
+                break;
+            }
+
+        default:
+            break;
+        }
+    }
+}
+
 
 
 

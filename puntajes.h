@@ -17,7 +17,6 @@ int generala (int dado[]) {
     }
 
     if(contador == 5) {
-        cout<<"Es una generala"<<endl;
         return 50;
     } else {
     return 0;
@@ -196,7 +195,7 @@ int juegoDe6 (int dado[]) {
 }
 
 void puntuacionesNombres (string puntajesNombre[], int V[], int dado[], int puntajes[], bool mostrarPuntajesDisponibles = false) {
-    int j, i;
+    int j;
     string noPuntajes[10];
 
     puntajesNombre[0] = "Juego de 1";
@@ -222,26 +221,26 @@ void puntuacionesNombres (string puntajesNombre[], int V[], int dado[], int punt
     V[1] = juegoDe2(dado);
     V[0] = juegoDe1(dado);
 
-//    for(i=0; i < 10; i++) {
-//        if(puntajes[i] == -1) {
-//            noPuntajes[i] = "Combinacion Disponible";
-//        } else {
-//            noPuntajes[i] = "Combinacion no Disponible";
-//        }
-//    }
-
-    //TODO: ACA SE TIENE QUE BUSCAR LA MANERA DE NOMBRAR CADA INDICE COMO UNA COMBINACION GANADORA
     for(j = 0; j < 10; j++) {
-
             if(mostrarPuntajesDisponibles) {
-                 cout<<"\n"<<j + 1<<" "<<puntajesNombre[j]<<" Puntaje: "<<V[j]<</*"   -------    "<<noPuntajes[j]<<*/endl;
-            } else {
+                if(puntajes[j] != -1) {
+                    cout<<"\n"<<j + 1<<" "<<puntajesNombre[j]<<" Puntaje: "<<V[j]<<" - *"<<endl;
+                } else {
+                    cout<<"\n"<<j + 1<<" "<<puntajesNombre[j]<<" Puntaje: "<<V[j]<<endl;
+                }
+            }
+            if(!mostrarPuntajesDisponibles){
                 if(V[j] != 0) {
-                    cout<<"\n"<<j + 1<<" "<<puntajesNombre[j]<<" Puntaje: "<<V[j]<</*"   -------    "<<noPuntajes[j]<<*/endl;
+                    if(puntajes[j] != -1) {
+                        cout<<"\n"<<j + 1<<" "<<puntajesNombre[j]<<" Puntaje: "<<V[j]<<" - *"<<endl;
+                    } else {
+                        cout<<"\n"<<j + 1<<" "<<puntajesNombre[j]<<" Puntaje: "<<V[j]<<endl;
+                    }
                 }
             }
         }
-        if(!mostrarPuntajesDisponibles)cout<<"\n"<<"El resto de la puntuacion tiene un valor de cero = 0"<<endl;
+        if(!mostrarPuntajesDisponibles) cout<<"\n"<<"El resto de la puntuacion tiene un valor de cero"<<endl;
+        cout<<"NOTA: * Indica que el puntaje ya fue tomado."<<endl;
 }
 
 //funcion para llamar a los puntajes de cada combinacion de dados
@@ -252,16 +251,19 @@ int puntajesGanadores(int dado[], int puntajes[], int result = -1, bool mostrarP
     bool flag = false;
     string puntajesNombre[10];
 
-    puntuacionesNombres(puntajesNombre, V, dado, puntajes, mostrarPuntajesDisponibles);
 
+    puntuacionesNombres(puntajesNombre, V, dado, puntajes, mostrarPuntajesDisponibles);
     if(result == -1) {
         return -1;
     }
-    //este while sirve como verificacion para que no se pueda sobreescribir
-    //un valor ya escogido.
+
     while(flag == false) {
-    cout<<"Elige el puntaje que deseas para esta ronda"<<endl; cin>>eleccion;
-    nIndice = eleccion - 1;
+
+    rlutil::hidecursor();
+
+    eleccion = elegir();
+
+    nIndice = eleccion -1;
         if(puntajes[nIndice] != -1) {
             cout<<"No se puede sobreescribir un puntaje ya guardado, por favor, ingrese otro puntaje"<<endl;
         } else {

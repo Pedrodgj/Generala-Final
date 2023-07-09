@@ -339,3 +339,56 @@
 	"puntajes.h"
 	"funciones.h"
 
+1688942425 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\generala\generala-final\main.cpp
+	<iostream>
+	<ctime>
+	<cstring>
+	<cstdlib>
+	<cstdio>
+	<ctype.h>
+	<wchar.h>
+	<locale.h>
+	"rlutil.h"
+	"puntosMenu.h"
+	"puntajes.h"
+	"rondas.h"
+
+1688423364 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\generala\generala-final\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1688942971 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\generala\generala-final\puntosmenu.h
+	<string>
+	"funciones.h"
+	"puntajes.h"
+	"rondas.h"
+
+1688942350 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\generala\generala-final\funciones.h
+	"puntosMenu.h"
+	"funciones.h"
+	"graficos.h"
+
+1688424267 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\generala\generala-final\graficos.h
+	"rlutil.h"
+	<windows.h>
+
+1688942426 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\generala\generala-final\puntajes.h
+	"funciones.h"
+	"puntosMenu.h"
+
+1688931502 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\generala\generala-final\rondas.h
+	<string>
+	<iostream>
+	"puntajes.h"
+	"funciones.h"
+

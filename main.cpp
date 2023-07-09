@@ -19,20 +19,18 @@ int main()
     rlutil::setBackgroundColor(2);
     string guardarPuntajes[5][3];
 
-    int opc = 1, y=0 ;
+    int y=0 ;
     while(true)
     {
         rlutil::hidecursor();
 
-//        rlutil::setColor(3);
         showItem("------MENU GENERALA------", 50, 10, y==0);
         showItem("JUEGO DE 1 JUGADOR       ", 50, 12, y==1);
         showItem("JUEGO DE 2 JUGADORES     ", 50, 14, y==2);
         showItem("RECORD DE PUNTAJES       ", 50, 16, y==3);
         showItem("COMBINACIONES DE PUNTAJES", 50, 18, y==4);
-        showItem("REGLAS DEL JUEGO         ", 50, 20, y==5);
-        showItem("MODO TEST                ", 50, 22, y==6);
-        showItem("SALIR DEL JUEGO          ", 50, 24, y==7);
+        showItem("MODO TEST                ", 50, 20, y==5);
+        showItem("SALIR DEL JUEGO          ", 50, 22, y==6);
 
         int key = rlutil::getkey();
         switch(key)
@@ -71,21 +69,17 @@ int main()
                 combinacionPuntaje();
                 break;
             case 5:
-                reglasGeneral();
-                break;
-            case 6:
                 modoTest(guardarPuntajes);
                 break;
-            case 7:
+            case 6:
+                return 0;
+                break;
+            case 0:
                 return 0;
                 break;
             default:
                 break;
             }
-//        case 0:
-//            return 0;
-//            break;
-
         default:
             break;
         }
